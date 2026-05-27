@@ -121,6 +121,7 @@ export const publications: Publication[] = [
     year: 2020,
     doi: 'https://doi.org/10.1016/j.eneco.2020.104871',
   },
+  
 ];
 
 export interface Book {
