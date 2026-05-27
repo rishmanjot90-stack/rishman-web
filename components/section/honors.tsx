@@ -1,34 +1,6 @@
-export default function HonorsSection() {
-  const honors = [
-    {
-      title:
-        'Best Paper Award at the Symposium on Ecology, Governance & Technology',
-      organization:
-        'Mehta Family School of Sustainability, IIT Indore, Indore, India',
-      year: '2026',
-      description:
-        'Best Paper Award at the Symposium on Ecology, Governance & Technology',
-    },
-    {
-      title: 'Datathon Challenge',
-      organization: 'NIUA, MoHUA',
-      year: '2023',
-      description: 'Recognition in national datathon competition',
-    },
-    {
-      title: 'National Eligibility Test (NET) in Economics',
-      organization: 'UGC',
-      year: '2014',
-      description: 'Qualified National Eligibility Test',
-    },
-    {
-      title: 'Merit Certificate (HSSC)',
-      organization: 'CBSE',
-      year: '2010',
-      description: 'Awarded to top 0.1% successful candidates',
-    },
-  ];
+import { honors } from '@/data/academic-data';
 
+export default function HonorsSection() {
   return (
     <div className="space-y-8">
       <h2 className="text-3xl font-bold">Honors & Awards</h2>

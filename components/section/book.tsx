@@ -1,38 +1,7 @@
 'use client';
 
+import { books } from '@/data/publication-data';
 import { ExternalLink, BookOpen } from 'lucide-react';
-
-interface Book {
-  contribution: string;
-  book: string;
-  year: number;
-  isbn: string;
-  authors: string[];
-  publisher: string;
-  doi?: string;
-}
-
-const books: Book[] = [
-  {
-    contribution:
-      'On the determinants of economic integration in SAARC countries: a macroeconomic perspective',
-    book: 'Economic and Financial Integration in South Asia',
-    year: 2020,
-    isbn: '9780815380139',
-    authors: ['Sehgal, S.', 'Ahmad, W.', 'Chahal, R. J. K.'],
-    publisher: 'Routledge',
-  },
-  {
-    contribution:
-      'Linking Corporate and Environmental Governance to the Sustainable Development Goals in an Emerging Economy',
-    book: 'Striving to Meet the Sustainable Development Goals: Next Steps for Policymakers and Practitioners',
-    year: 2025,
-    isbn: '978-4-89974-324-8',
-    authors: ['Chahal, R. J. K.', 'Ahmad, W.'],
-    publisher: 'ADBI',
-    doi: 'https://doi.org/10.56506/ACFH4829',
-  },
-];
 
 export function Books() {
   return (
