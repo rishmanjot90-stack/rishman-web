@@ -7,7 +7,7 @@ export function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight text-balance">
                 Welcome to My Academic Journey
               </h1>
@@ -16,7 +16,7 @@ export function Hero() {
                 academic fields. Passionate about inspiring the next generation
                 of scholars and innovators.
               </p>
-            </div>
+            </div> */}
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               {/* <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
