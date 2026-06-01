@@ -3,71 +3,43 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { navItems } from '@/data/navigation-data';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <nav className="fixed top-0 w-full  border-border z-50 shadow-sm  border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="fixed top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="shrink-0 font-bold text-xl text-primary">
+          <Link
+            href="/"
+            className="shrink-0 text-lg font-bold text-primary lg:text-xl"
+          >
             Rishman Jot Kaur Chahal
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {/* <Link
-              href="/about"
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              About
-            </Link> */}
-            <Link
-              href="/publications"
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Publications
-            </Link>
-            <Link
-              href="/teaching"
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Teaching
-            </Link>
-            <Link
-              href="/projects"
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Projects
-            </Link>
-            <Link
-              href="/supervision"
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Supervision
-            </Link>
-            <Link
-              href="/research-group"
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Research Group
-            </Link>
-            {/* <Link
-              href="/contact"
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Contact
-            </Link> */}
+          <div className="hidden items-center gap-6 md:flex lg:gap-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-foreground transition-colors hover:text-primary"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-md text-foreground hover:bg-secondary transition-colors"
+            className="rounded-md p-2 transition-colors hover:bg-secondary md:hidden"
+            aria-label="Toggle Menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -75,61 +47,19 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2">
-            {/* <Link
-              href="/about"
-              className="block px-3 py-2 rounded-md text-foreground hover:bg-secondary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </Link> */}
-
-            <Link
-            
-              href="/publications"
-              className="block px-3 py-2 rounded-md text-foreground hover:bg-secondary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Publications
-            </Link>
-
-            <Link
-              href="/teaching"
-              className="block px-3 py-2 rounded-md text-foreground hover:bg-secondary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Teaching
-            </Link>
-            <Link
-              href="/projects"
-              className="block px-3 py-2 rounded-md text-foreground hover:bg-secondary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Projects
-            </Link>
-            <Link
-              href="/supervision"
-              className="block px-3 py-2 rounded-md text-foreground hover:bg-secondary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Supervision
-            </Link>
-
-            <Link
-              href="/research-group"
-              className="block px-3 py-2 rounded-md text-foreground hover:bg-secondary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Research Group
-            </Link>
-
-            {/* <Link
-              href="/contact"
-              className="block px-3 py-2 rounded-md text-foreground hover:bg-secondary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link> */}
+          <div className="border-t py-3 md:hidden">
+            <div className="space-y-1">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-md px-3 py-2 text-foreground transition-colors hover:bg-secondary"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </div>

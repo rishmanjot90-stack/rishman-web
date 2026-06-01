@@ -15,7 +15,7 @@ export const publications: Publication[] = [
     authors: ['Chahal, R. J. K.', 'Bidasaria, H.', 'Khan, H. A.', 'Ahmad, W.'],
     journal: 'Journal of Behavioral and Experimental Finance',
     year: 2026,
-    doi: '',
+    doi: 'https://www.sciencedirect.com/science/article/abs/pii/S2214635026000134',
   },
   {
     title:
@@ -23,7 +23,7 @@ export const publications: Publication[] = [
     authors: ['Manish', 'Chahal, R. J. K.'],
     journal: 'Review in International Business and Finance',
     year: 2026,
-    doi: '',
+    doi: 'https://www.sciencedirect.com/science/article/abs/pii/S0275531926000565',
   },
   {
     title:
@@ -121,7 +121,6 @@ export const publications: Publication[] = [
     year: 2020,
     doi: 'https://doi.org/10.1016/j.eneco.2020.104871',
   },
-  
 ];
 
 export interface Book {
