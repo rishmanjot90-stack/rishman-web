@@ -28,10 +28,10 @@ export default function ProfileIntro() {
             </p>
 
             <p>
-              Her research interests span Governance and Institutions, Financial
-              Economics, Computational General Equilibrium (CGE) Modelling, Time
-              Series Data Analysis, and Applied Machine Learning and Artificial
-              Intelligence.
+              Her research interests span from Corporate Governance and
+              Institutions, Financial Economics, Computational General
+              Equilibrium (CGE) Modelling, Sustainable Finance, Time Series and
+              Machine learning applications in Macroeconomics
             </p>
 
             <p>
