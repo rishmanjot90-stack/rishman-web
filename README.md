@@ -1,3 +1,38 @@
+# 🖥️ Development Setup
+
+## One command to update your local repository
+
+```bash
+git pull
+
+```
+
+## Run Development Server
+
+```bash
+pnpm dev
+```
+
+Application will run on:
+
+```txt
+http://localhost:3000
+```
+
+Open the URL in your browser.
+
+---
+
+# 🛠️ Production Build
+
+To create a production build:
+
+```bash
+pnpm build
+```
+
+---
+
 # web-page
 
 A modern web application built using Next.js, TypeScript, and pnpm.
