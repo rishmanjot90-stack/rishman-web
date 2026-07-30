@@ -74,6 +74,12 @@ export interface Honor {
 
 export const honors: Honor[] = [
   {
+    title: 'Best Paper Award at the 11th International Conference on Accounting and Finance',
+    organization: 'Danang University of Economics, Vietnam',
+    year: '2026',
+    description: '',
+  },
+  {
     title: 'Best Paper Award at the PAN IIT 8th International Conference on Financial Markets and Corporate Finance',
     organization: 'IIT Madras',
     year: '2026',
@@ -86,7 +92,7 @@ export const honors: Honor[] = [
       'Mehta Family School of Sustainability, IIT Indore, Indore, India',
     year: '2026',
     description:
-      'Best Paper Award at the Symposium on Ecology, Governance & Technology',
+      '',
   },
   {
     title: 'Datathon Challenge',
