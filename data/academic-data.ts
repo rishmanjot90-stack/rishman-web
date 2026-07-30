@@ -74,6 +74,12 @@ export interface Honor {
 
 export const honors: Honor[] = [
   {
+    title: 'Best Paper Award at the PAN IIT 8th International Conference on Financial Markets and Corporate Finance',
+    organization: 'IIT Madras',
+    year: '2026',
+    description: '',
+  },
+  {
     title:
       'Best Paper Award at the Symposium on Ecology, Governance & Technology',
     organization:
@@ -100,6 +106,7 @@ export const honors: Honor[] = [
     year: '2010',
     description: 'Awarded to top 0.1% successful candidates',
   },
+  
 ];
 
 export interface Visit {
